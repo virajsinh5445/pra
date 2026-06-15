@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pra.css">
+</head>
+<body>
+
+    <header>
+        <h1>Product Manager</h1>
+    </header>
+
+    <main class="container">
+        
+        <section class="form-section">
+            <h2>Add New Product</h2>
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="title">Product Title</label>
+                    <input type="text" id="title" placeholder="Enter product name">
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price ($)</label>
+                    <input type="number" id="price" placeholder="Enter price" step="0.01">
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Image URL</label>
+                    <input type="text" id="image" placeholder="Paste image link here">
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Grocery">Grocery</option>
+                        <option value="Books">Books</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <button type="button" id="submit-btn" class="primary-btn">Add Product</button>
+            </form>
+        </section>
+
+        <section class="display-section">
+            
+            <div class="controls-container">
+                <input type="text" id="search-input" placeholder="Search by title...">
+                
+                <select id="filter-category">
+                    <option value="All">All Categories</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Grocery">Grocery</option>
+                    <option value="Books">Books</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <div class="sort-buttons">
+                    <button id="sort-asc-btn" class="secondary-btn">Price: Low to High</button>
+                    <button id="sort-desc-btn" class="secondary-btn">Price: High to Low</button>
+                </div>
+            </div>
+
+            <div class="stats">
+                <p>Showing: <span id="product-count">0</span> products</p>
+            </div>
+
+            <div id="products-container" class="products-grid">
+                </div>
+
+        </section>
+
+    </main>
+
+    <script src="pra.js"></script>
+</body>
+</html>
